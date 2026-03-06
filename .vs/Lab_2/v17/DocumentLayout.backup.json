@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5852E455-B90A-DA33-FB45-BE959AFEB886}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\assets\\script\\player movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5852E455-B90A-DA33-FB45-BE959AFEB886}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5852E455-B90A-DA33-FB45-BE959AFEB886}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\assets\\script\\charactercontroller2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5852E455-B90A-DA33-FB45-BE959AFEB886}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\charactercontroller2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5852E455-B90A-DA33-FB45-BE959AFEB886}|Assembly-CSharp.csproj|d:\\nau\\3_course\\2_semester\\mipc\\lab_2\\assets\\script\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5852E455-B90A-DA33-FB45-BE959AFEB886}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5852E455-B90A-DA33-FB45-BE959AFEB886}|Assembly-CSharp.csproj|d:\\nau\\3_course\\2_semester\\mipc\\lab_2\\assets\\script\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5852E455-B90A-DA33-FB45-BE959AFEB886}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Coin.cs",
+              "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\Assets\\Script\\Coin.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Coin.cs",
+              "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\Assets\\Script\\Coin.cs",
+              "RelativeToolTip": "Assets\\Script\\Coin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T11:30:45.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\Assets\\Script\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CameraFollow.cs",
+              "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\Assets\\Script\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Script\\CameraFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:43:35.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CharacterController2D.cs",
+              "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\Assets\\Script\\CharacterController2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CharacterController2D.cs",
+              "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\Assets\\Script\\CharacterController2D.cs",
+              "RelativeToolTip": "Assets\\Script\\CharacterController2D.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAmwF8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T07:27:09.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player Movement.cs",
+              "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\Assets\\Script\\Player Movement.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player Movement.cs",
+              "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Lab_2\\Assets\\Script\\Player Movement.cs",
+              "RelativeToolTip": "Assets\\Script\\Player Movement.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:32:06.588Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
