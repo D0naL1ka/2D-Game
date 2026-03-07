@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool airControl = true;
 
     [Header("Jump")]
-    [SerializeField] private float jumpHeight = 3f;             // normal jump height in meters
+    [SerializeField] private float jumpHeight = 3f; // normal jump height in meters
 
     [Header("Ground Check")]
     [SerializeField] private LayerMask whatIsGround;
@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent OnLandEvent;
+
+    [Header("Slippery Movement")]
+    [SerializeField] private float slipperyDamping = 0.98f;
 
     private Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
@@ -70,6 +73,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool IsOnSlipperySurface()
+    {
+        if (!isGrounded) return false;
+
+        Collider2D groundCollider = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
+        if (groundCollider != null && groundCollider.sharedMaterial != null)
+        {
+            return groundCollider.sharedMaterial.name.Contains("Slippery");
+        }
+        return false;
+    }
+
     private void FixedUpdate()
     {
         wasGrounded = isGrounded;
@@ -90,20 +105,45 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        bool onSlippery = IsOnSlipperySurface();
+        // Movement
         if (isGrounded || airControl)
         {
-            Vector3 targetVelocity = new Vector2(horizontalMove * 10f, rb.linearVelocity.y);
-            rb.linearVelocity = Vector3.SmoothDamp(rb.linearVelocity, targetVelocity, ref velocity, movementSmoothing);
+            if (onSlippery)
+            {
+                // On a slippery surface — minimal braking
+                // Add only the desired acceleration, but do not brake much
+                float targetX = horizontalMove * 10f;
+                float currentX = rb.linearVelocity.x;
+
+                // Smooth acceleration/deceleration, but very slow
+                float newX = Mathf.Lerp(currentX, targetX, 0.05f); // 0.05 = very full response
+                rb.linearVelocity = new Vector2(newX, rb.linearVelocity.y);
+            }
+            else
+            {
+                // Normal movement on normal surfaces
+                Vector3 targetVelocity = new Vector2(horizontalMove * 10f, rb.linearVelocity.y);
+                rb.linearVelocity = Vector3.SmoothDamp(rb.linearVelocity, targetVelocity, ref velocity, movementSmoothing);
+            }
 
             if (horizontalMove > 0 && !facingRight) Flip();
             else if (horizontalMove < 0 && facingRight) Flip();
         }
 
+        //jump
         if (isGrounded && jumpPressedThisFrame)
         {
             isGrounded = false;
             PerformJump(jumpHeight);
             jumpPressedThisFrame = false;
+        }
+
+        //Slippery
+        if (onSlippery && isGrounded && Mathf.Abs(horizontalMove) < 0.1f)
+        {
+            float xVel = rb.linearVelocity.x;
+            rb.linearVelocity = new Vector2(xVel * slipperyDamping, rb.linearVelocity.y);
         }
     }
 
