@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool airControl = true;
 
     [Header("Jump")]
-    [SerializeField] private float jumpHeight = 3f;
+    [SerializeField] private float jumpHeight = 3f;             // normal jump height in meters
 
     [Header("Ground Check")]
     [SerializeField] private LayerMask whatIsGround;
@@ -48,16 +48,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if (OnLandEvent == null)
-        {
             OnLandEvent = new UnityEvent();
-        }
-    }
-
-    private void Start()
-    {
-        float gravity = Mathf.Abs(Physics2D.gravity.y);
-        float jumpVelocity = Mathf.Sqrt(2 * gravity * jumpHeight);
-        float calculatedJumpForce = jumpVelocity * rb.mass;
     }
 
     private void Update()
@@ -69,17 +60,13 @@ public class PlayerController : MonoBehaviour
         }
 
         if (animator != null)
-        {
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        }
 
         if (jumpAction != null && jumpAction.WasPressedThisFrame())
         {
             jumpPressedThisFrame = true;
             if (animator != null)
-            {
                 animator.SetBool("isJumping", true);
-            }
         }
     }
 
@@ -98,9 +85,7 @@ public class PlayerController : MonoBehaviour
                 {
                     OnLandEvent?.Invoke();
                     if (animator != null)
-                    {
                         animator.SetBool("isJumping", false);
-                    }
                 }
             }
         }
@@ -114,26 +99,19 @@ public class PlayerController : MonoBehaviour
             else if (horizontalMove < 0 && facingRight) Flip();
         }
 
-        // Стрибок
         if (isGrounded && jumpPressedThisFrame)
         {
             isGrounded = false;
-
-            float gravity = Mathf.Abs(Physics2D.gravity.y);
-            float jumpVelocity = Mathf.Sqrt(2 * gravity * jumpHeight);
-            float jumpForce = jumpVelocity * rb.mass;
-
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
+            PerformJump(jumpHeight);
             jumpPressedThisFrame = false;
         }
     }
 
-    private void Flip()
+    private void PerformJump(float height)
     {
-        facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        float gravity = Mathf.Abs(Physics2D.gravity.y);
+        float jumpVelocity = Mathf.Sqrt(2 * gravity * height);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -141,6 +119,15 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("MovingPlatform"))
         {
             transform.SetParent(collision.transform);
+        }
+
+        // BouncePlatform
+        if (collision.gameObject.TryGetComponent<BouncePlatform>(out var bounce))
+        {
+            if (rb.linearVelocity.y <= 0.1f)
+            {
+                PerformJump(bounce.BounceJumpHeight);
+            }
         }
     }
 
@@ -150,6 +137,14 @@ public class PlayerController : MonoBehaviour
         {
             transform.SetParent(null);
         }
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     public bool IsGrounded => isGrounded;
