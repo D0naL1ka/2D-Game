@@ -8,12 +8,10 @@ public class Checkpoint : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-
         if (oneTimeUse && activated) return;
 
         activated = true;
-
         FallRespawn.Instance.SetCheckpoint(transform.position + Vector3.up * 1f);
-        Debug.Log("Чекпоінт активовано!");
+        Debug.Log("Checkpoint activated!");
     }
 }

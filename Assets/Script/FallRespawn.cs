@@ -4,14 +4,14 @@ public class FallRespawn : MonoBehaviour
 {
     public static FallRespawn Instance { get; private set; }
 
-    [Header("Налаштування падіння")]
+    [Header("Fall Settings")]
     [SerializeField] private float fallDeathY = -20f;
 
     private Transform playerTransform;
     private Rigidbody2D playerRb;
 
     private Vector3 startPosition;
-    private Vector3 checkpointPosition;
+    private Vector3 lastCheckpointPosition;
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class FallRespawn : MonoBehaviour
         var player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
         {
-            Debug.LogError("FallRespawn: Не знайдено гравця з тегом 'Player'!");
+            Debug.LogError("FallRespawn: Player with tag 'Player' not found!");
             enabled = false;
             return;
         }
@@ -37,38 +37,38 @@ public class FallRespawn : MonoBehaviour
         playerRb = player.GetComponent<Rigidbody2D>();
 
         startPosition = playerTransform.position;
-        checkpointPosition = startPosition;
+        lastCheckpointPosition = startPosition;
 
-        Debug.Log($"FallRespawn готовий. Старт: {startPosition}");
+        Debug.Log($"FallRespawn initialized. Start position: {startPosition}");
     }
 
     private void Update()
     {
-        // Падіння - повернення на початок
         if (playerTransform.position.y < fallDeathY)
         {
-            RespawnToStart();
+            RespawnToLastCheckpoint();
         }
     }
 
-    private void RespawnToStart()
+    public void RespawnToLastCheckpoint()
     {
-        Debug.Log("Гравець впав! Повернення на початок.");
-        playerTransform.position = startPosition;
+        Debug.Log("Player fell! Respawning to last checkpoint.");
+        playerTransform.position = lastCheckpointPosition;
         playerRb.linearVelocity = Vector2.zero;
-        checkpointPosition = startPosition; 
     }
 
-    public void RespawnToCheckpoint()
+    //після завершення гри
+    public void RespawnToStart() 
     {
-        Debug.Log("Respawn на чекпоінт.");
-        playerTransform.position = checkpointPosition;
+        Debug.Log("Respawn to start (manual).");
+        playerTransform.position = startPosition;
         playerRb.linearVelocity = Vector2.zero;
+        lastCheckpointPosition = startPosition; 
     }
 
     public void SetCheckpoint(Vector3 position)
     {
-        checkpointPosition = position;
-        Debug.Log($"Чекпоінт оновлено: {position}");
+        lastCheckpointPosition = position;
+        Debug.Log($"Checkpoint updated: {position}");
     }
 }
