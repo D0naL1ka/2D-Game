@@ -1,4 +1,3 @@
-// Scripts/DamageZone.cs
 using UnityEngine;
 
 public class DamageZone : MonoBehaviour

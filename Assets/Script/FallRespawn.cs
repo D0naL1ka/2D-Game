@@ -1,4 +1,3 @@
-// Scripts/FallRespawn.cs
 using UnityEngine;
 
 public class FallRespawn : MonoBehaviour
@@ -45,7 +44,7 @@ public class FallRespawn : MonoBehaviour
 
     private void Update()
     {
-        // Падіння → повернення на початок
+        // Падіння - повернення на початок
         if (playerTransform.position.y < fallDeathY)
         {
             RespawnToStart();
@@ -57,7 +56,7 @@ public class FallRespawn : MonoBehaviour
         Debug.Log("Гравець впав! Повернення на початок.");
         playerTransform.position = startPosition;
         playerRb.linearVelocity = Vector2.zero;
-        checkpointPosition = startPosition; // Скидаємо прогрес
+        checkpointPosition = startPosition; 
     }
 
     public void RespawnToCheckpoint()
