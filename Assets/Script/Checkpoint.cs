@@ -9,9 +9,8 @@ public class Checkpoint : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         if (oneTimeUse && activated) return;
-
         activated = true;
+        PlatformerSoundManager.Instance.PlayCheckpoint();
         FallRespawn.Instance.SetCheckpoint(transform.position + Vector3.up * 1f);
-        Debug.Log("Checkpoint activated!");
     }
 }

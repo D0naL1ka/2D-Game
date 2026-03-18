@@ -21,4 +21,9 @@ public class BouncePlatform : MonoBehaviour
         };
         col.sharedMaterial = mat;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+            PlatformerSoundManager.Instance.PlayBounce();
+    }
 }
