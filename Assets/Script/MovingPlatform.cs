@@ -1,4 +1,3 @@
-// Scripts/MovingPlatform.cs
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour

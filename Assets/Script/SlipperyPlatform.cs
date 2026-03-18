@@ -3,17 +3,15 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class SlipperyPlatform : MonoBehaviour
 {
-    [Header("Слизькість")]
+    [Header("Slippery Settings")]
     [SerializeField] private float friction = 0f;
     [SerializeField] private float bounciness = 0f;
-
     [SerializeField] private PhysicsMaterialCombine2D frictionCombine = PhysicsMaterialCombine2D.Minimum;
     [SerializeField] private PhysicsMaterialCombine2D bounceCombine = PhysicsMaterialCombine2D.Minimum;
 
     void Start()
     {
         var col = GetComponent<Collider2D>();
-
         var mat = new PhysicsMaterial2D("SlipperyMaterial")
         {
             friction = friction,
@@ -21,9 +19,6 @@ public class SlipperyPlatform : MonoBehaviour
             frictionCombine = frictionCombine,
             bounceCombine = bounceCombine
         };
-
         col.sharedMaterial = mat;
-
-        Debug.Log("Слизька платформа налаштована!");
     }
 }

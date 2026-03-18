@@ -1,4 +1,3 @@
-// Scripts/Checkpoint.cs
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
@@ -9,12 +8,9 @@ public class Checkpoint : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-
         if (oneTimeUse && activated) return;
-
         activated = true;
-
+        PlatformerSoundManager.Instance.PlayCheckpoint();
         FallRespawn.Instance.SetCheckpoint(transform.position + Vector3.up * 1f);
-        Debug.Log("Чекпоінт активовано!");
     }
 }

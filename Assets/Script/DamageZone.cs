@@ -1,14 +1,69 @@
-// Scripts/DamageZone.cs
-using UnityEngine;
+п»їusing UnityEngine;
+
+
 
 public class DamageZone : MonoBehaviour
+
 {
-    private void OnTriggerEnter2D(Collider2D other)
+
+    [Header("Damage Settings")]
+
+    [SerializeField] private float energyDrainPerSecond = 10f;
+
+
+
+    private void OnTriggerStay2D(Collider2D other)
+
     {
+
         if (other.CompareTag("Player"))
+
         {
-            FallRespawn.Instance.RespawnToCheckpoint();
-            Debug.Log("Гравець у зоні небезпеки! Respawn на чекпоінт.");
+
+            if (GameManager.Instance != null)
+
+            {
+                GameManager.Instance.DrainEnergy(energyDrainPerSecond * Time.deltaTime);
+
+            }
+
         }
+
     }
+
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+
+    {
+
+        if (other.CompareTag("Player"))
+
+        {
+            PlatformerSoundManager.Instance.PlayDamage();
+
+            Debug.Log("Р“СЂР°РІРµС†СЊ СѓРІС–Р№С€РѕРІ Сѓ DamageZone");
+
+            // FallRespawn.Instance.RespawnToLastCheckpoint();
+
+        }
+
+    }
+
+
+
+    private void OnTriggerExit2D(Collider2D other)
+
+    {
+
+        if (other.CompareTag("Player"))
+
+        {
+
+            Debug.Log("Р“СЂР°РІРµС†СЊ РІРёР№С€РѕРІ Р· DamageZone");
+
+        }
+
+    }
+
 }

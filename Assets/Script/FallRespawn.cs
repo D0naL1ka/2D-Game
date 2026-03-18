@@ -1,75 +1,167 @@
-// Scripts/FallRespawn.cs
-using UnityEngine;
+﻿using UnityEngine;
+
+using UnityEngine.SceneManagement;
+
+
 
 public class FallRespawn : MonoBehaviour
+
 {
+
     public static FallRespawn Instance { get; private set; }
 
-    [Header("Налаштування падіння")]
+
+
+    [Header("Fall Settings")]
+
     [SerializeField] private float fallDeathY = -20f;
 
+
+
     private Transform playerTransform;
+
     private Rigidbody2D playerRb;
 
+
+
     private Vector3 startPosition;
-    private Vector3 checkpointPosition;
+
+    private Vector3 lastCheckpointPosition;
+
+
 
     private void Awake()
+
     {
+
         if (Instance != null && Instance != this)
+
         {
+
             Destroy(gameObject);
+
             return;
+
         }
+
         Instance = this;
+
+        DontDestroyOnLoad(gameObject);
+
     }
 
-    private void Start()
+    private void OnEnable()
+
     {
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        FindPlayer();
+
+    }
+
+    private void OnDisable()
+
+    {
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+    }
+
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+
+    {
+
+        FindPlayer();
+
+    }
+
+
+
+    private void FindPlayer()
+
+    {
+
         var player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
+
+        if (player != null)
+
         {
-            Debug.LogError("FallRespawn: Не знайдено гравця з тегом 'Player'!");
-            enabled = false;
-            return;
+
+            playerTransform = player.transform;
+
+            playerRb = player.GetComponent<Rigidbody2D>();
+
+
+
+            if (startPosition == Vector3.zero)
+
+            {
+
+                startPosition = playerTransform.position;
+
+                lastCheckpointPosition = startPosition;
+
+            }
+
+
+
+            Debug.Log($"FallRespawn initialized. Start position: {startPosition}");
+
         }
 
-        playerTransform = player.transform;
-        playerRb = player.GetComponent<Rigidbody2D>();
+        else
 
-        startPosition = playerTransform.position;
-        checkpointPosition = startPosition;
+        {
 
-        Debug.Log($"FallRespawn готовий. Старт: {startPosition}");
+            Debug.LogError("FallRespawn: Player with tag 'Player' not found!");
+
+        }
+
     }
+
+
 
     private void Update()
     {
-        // Падіння → повернення на початок
+        // Перевіряємо null перед доступом
+        if (playerTransform == null)
+        {
+            FindPlayer();  // намагаємося знайти, якщо раптом зник
+            return;
+        }
+
         if (playerTransform.position.y < fallDeathY)
         {
-            RespawnToStart();
+            GameManager.Instance.LoseLife();  // -1 життя
+            RespawnToLastCheckpoint();
         }
     }
 
-    private void RespawnToStart()
+    public void RespawnToLastCheckpoint()
+
     {
-        Debug.Log("Гравець впав! Повернення на початок.");
-        playerTransform.position = startPosition;
+
+        Debug.Log("Player fell! Respawning to last checkpoint.");
+
+        playerTransform.position = lastCheckpointPosition;
+
         playerRb.linearVelocity = Vector2.zero;
-        checkpointPosition = startPosition; // Скидаємо прогрес
+
     }
 
-    public void RespawnToCheckpoint()
-    {
-        Debug.Log("Respawn на чекпоінт.");
-        playerTransform.position = checkpointPosition;
-        playerRb.linearVelocity = Vector2.zero;
-    }
+
 
     public void SetCheckpoint(Vector3 position)
+
     {
-        checkpointPosition = position;
-        Debug.Log($"Чекпоінт оновлено: {position}");
+
+        lastCheckpointPosition = position;
+
+        Debug.Log($"Checkpoint updated: {position}");
+
     }
+
 }

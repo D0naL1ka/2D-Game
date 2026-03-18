@@ -2,21 +2,24 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;       // Об'єкт, за яким стежимо (гравець)
-    public float smoothSpeed = 0.125f; // Швидкість згладжування
-    public Vector3 offset;         // Зміщення (наприклад, 0, 0, -10)
+    [Header("Follow Settings")]
+    public Transform target;
+    public float smoothSpeed = 0.125f;
+    public Vector3 offset;
+
+    [Header("Y Clamp (prevent out of frustum)")]
+    [SerializeField] private float minCameraY = -10f;
+    [SerializeField] private float maxCameraY = 10f;
 
     void FixedUpdate()
     {
         if (target != null)
         {
-            // Визначаємо бажану позицію
             Vector3 desiredPosition = target.position + offset;
 
-            // Плавно переміщуємо камеру до цієї позиції
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            desiredPosition.y = Mathf.Clamp(desiredPosition.y, minCameraY, maxCameraY);
 
-            // Оновлюємо позицію камери
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
         }
     }
