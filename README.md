@@ -66,15 +66,6 @@ You lose if all 5 lives are depleted (by falling or standing in damage zones).
 
 ---
 
-## Tags used in Unity
-
-| Tag | Object |
-|---|---|
-| `Player` | The player character |
-| `Finish` | The finish trigger zone |
-
----
-
 ## Author
 
 **D0naL1ka** — [github.com/D0naL1ka](https://github.com/D0naL1ka)
