@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameManager.Instance.AddCoin();
             PlatformerSoundManager.Instance.PlayCoin();
             Debug.Log("Монету зібрано гравцем!");
             Destroy(gameObject);
