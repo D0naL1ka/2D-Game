@@ -7,16 +7,36 @@
       "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\fallrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\fallrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|d:\\nau\\3_course\\2_semester\\mipc\\game_2d\\assets\\script\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|d:\\nau\\3_course\\2_semester\\mipc\\game_2d\\assets\\script\\sound\\footsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\sound\\volumecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\sound\\volumecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\sound\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\sound\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\sound\\footsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\sound\\footsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|d:\\nau\\3_course\\2_semester\\mipc\\game_2d\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\sound\\platformersoundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\sound\\platformersoundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\bounceplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bounceplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\fallrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\fallrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,20 +47,8 @@
       "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\damagezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\bounceplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bounceplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\slipperyplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\slipperyplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\sound\\platformersoundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\sound\\platformersoundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6EC8C70B-CB09-659F-DFC0-E7F0E3086C21}|Assembly-CSharp.csproj|D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\assets\\script\\movingplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +74,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MusicManager.cs",
+              "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Sound\\MusicManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Sound\\MusicManager.cs",
+              "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Sound\\MusicManager.cs",
+              "RelativeToolTip": "Assets\\Script\\Sound\\MusicManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T16:30:51.228Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "VolumeController.cs",
+              "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Sound\\VolumeController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Sound\\VolumeController.cs",
+              "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Sound\\VolumeController.cs",
+              "RelativeToolTip": "Assets\\Script\\Sound\\VolumeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T16:29:31.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Footsteps.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Sound\\Footsteps.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Sound\\Footsteps.cs",
@@ -74,12 +106,11 @@
               "RelativeToolTip": "Assets\\Script\\Sound\\Footsteps.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T14:05:35.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T14:05:35.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "PlatformerSoundManager.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Sound\\PlatformerSoundManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Sound\\PlatformerSoundManager.cs",
@@ -97,27 +128,26 @@
               "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
               "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\GameManager.cs",
               "RelativeToolTip": "Assets\\Script\\GameManager.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAkwK4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAMwIIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-07T16:31:00.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerController.cs",
               "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerController.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAmwIsAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAFYBAAAAAAAAAAAYwH0BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T16:42:52.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T16:42:52.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "FallRespawn.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\FallRespawn.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\FallRespawn.cs",
@@ -125,12 +155,11 @@
               "RelativeToolTip": "Assets\\Script\\FallRespawn.cs",
               "ViewState": "AgIAAHYAAAAAAAAAAAAAwIwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T16:26:38.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T16:26:38.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "SlipperyPlatform.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\SlipperyPlatform.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SlipperyPlatform.cs",
@@ -138,12 +167,11 @@
               "RelativeToolTip": "Assets\\Script\\SlipperyPlatform.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:42:47.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T09:42:47.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BouncePlatform.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\BouncePlatform.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\BouncePlatform.cs",
@@ -151,12 +179,11 @@
               "RelativeToolTip": "Assets\\Script\\BouncePlatform.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:42:44.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T09:42:44.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "DamageZone.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\DamageZone.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DamageZone.cs",
@@ -164,12 +191,11 @@
               "RelativeToolTip": "Assets\\Script\\DamageZone.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwCoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:39:14.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T09:39:14.112Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Checkpoint.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Checkpoint.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Checkpoint.cs",
@@ -177,12 +203,11 @@
               "RelativeToolTip": "Assets\\Script\\Checkpoint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:37:45.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T09:37:45.394Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CameraFollow.cs",
@@ -194,20 +219,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Coin.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Coin.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Coin.cs",
               "ToolTip": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\Coin.cs",
               "RelativeToolTip": "Assets\\Script\\Coin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-06T09:30:49.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "MovingPlatform.cs",
               "DocumentMoniker": "D:\\NAU\\3_course\\2_semester\\MIPC\\Game_2D\\Assets\\Script\\MovingPlatform.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MovingPlatform.cs",

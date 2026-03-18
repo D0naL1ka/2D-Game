@@ -128,50 +128,20 @@ public class GameManager : MonoBehaviour
 
     private void FindGameOverCanvasAndButtons()
     {
-        // Спроба 1: пошук по точній назві в корені (на всяк випадок)
-        gameOverCanvas = GameObject.Find("GameOverCanvas");
-
-        // Спроба 2: пошук всередині головного Canvas (саме твій випадок)
         if (gameOverCanvas == null)
         {
-            var mainCanvas = GameObject.Find("Canvas");
-            if (mainCanvas != null)
-            {
-                // Шукаємо за назвою всередині Canvas
-                gameOverCanvas = mainCanvas.transform.Find("GameOverCanvas")?.gameObject;
-            }
+            gameOverCanvas = GameObject.FindWithTag("GameOverCanvas");
         }
 
-        // Якщо все ще не знайшли — лог + спроба знайти за дочірнім текстом
         if (gameOverCanvas == null)
         {
-            var allTexts = FindObjectsOfType<TextMeshProUGUI>(true);
-            foreach (var txt in allTexts)
-            {
-                if (txt.text.Contains("Victory") || txt.text.Contains("Game Over") || txt.name.Contains("TMP"))
-                {
-                    gameOverCanvas = txt.transform.root.gameObject; // йдемо вгору до кореня Canvas
-                    break;
-                }
-            }
+            Debug.LogError("GameOverCanvas не знайдено!");
+            return;
         }
 
-        if (gameOverCanvas != null)
-        {
-            gameOverText = gameOverCanvas.GetComponentInChildren<TextMeshProUGUI>(true);
-
-            // Кнопки — за твоїми назвами з Hierarchy: RestartButton та CloseButton
-            restartButton = gameOverCanvas.transform.Find("RestartButton")?.GetComponent<Button>();
-            closeButton = gameOverCanvas.transform.Find("CloseButton")?.GetComponent<Button>();
-
-            Debug.Log($"Успішно знайдено GameOverCanvas: {gameOverCanvas.name}");
-            if (restartButton != null) Debug.Log("RestartButton знайдено");
-            if (closeButton != null) Debug.Log("CloseButton знайдено");
-        }
-        else
-        {
-            Debug.LogError("GameOverCanvas НЕ знайдено жодним способом! Перевір назву та ієрархію.");
-        }
+        gameOverText = gameOverCanvas.GetComponentInChildren<TextMeshProUGUI>(true);
+        restartButton = gameOverCanvas.transform.Find("RestartButton")?.GetComponent<Button>();
+        closeButton = gameOverCanvas.transform.Find("CloseButton")?.GetComponent<Button>();
     }
 
     private void SetupGameOverButtons()
